@@ -12,11 +12,15 @@ nav {
     font-family: "Arimo", sans-serif;
 }
 nav div { 
-    
-    width: 60px;
+    width: 270px;
     height: 60px;
     border-radius: 5px;
     margin-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
 }
 nav ul {
     text-align: right;
@@ -34,11 +38,11 @@ nav a:link {
     
 }
 nav img{
-    width: 100%;
+    width: 50px;
 }
 
 nav ul li img{
-    width: 30px;
+    width: 20px;
 }
 
 /* Footer */
@@ -57,24 +61,36 @@ footer p {
 
 /* index.php */
 main {
-    border: 2px solid rgb(68, 158, 255);/* Remove */
+    
     width: 100%;
     height: 1000px;
     padding: 20px;
     font-family: "Arimo", sans-serif;
+    background-color: #eee7e7;
 }
 div {
     border-radius: 3px;
 }
 #div1{
-    border: 2px solid rgb(34, 104, 25);/* Remove */
+    
     width: 100%;
     height: 200px;
     margin-bottom: 20px; /* Pushes out  */
     padding: 20px; /* Pushes in */
+    background: linear-gradient(340deg, #6aafff, #131eb3);
 }
+#div1 h1{
+color: #eee7e7;
+font-weight: bold;
+font-size: 2em;
+}
+#div1 p{
+color: #eee7e7;
+font-size: 1.3em;
+}
+
 #div2{
-    border: 2px solid rgb(104, 25, 25);/* Remove */
+    
     width: 100%;
     height: 400px;
     margin-bottom: 20px;
@@ -88,8 +104,17 @@ div {
 #div2 div{
     width: 250px;
     height: 375px;
-    border: 2px solid rgb(134, 29, 175);
-
+    
+    background-color: #6aafff ;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-shadow: #fdc500;
+    font-weight: bold;
+    font-size: 3.5em;
+    color: #eee7e7;
 }
 
 #div2 div:hover {
