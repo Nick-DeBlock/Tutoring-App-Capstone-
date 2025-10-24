@@ -1,0 +1,114 @@
+
+/* Nav */
+nav {
+    width: 100%;
+    max-width: 100%;
+    height: 75px;
+    background-color: #001d3d;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Arimo", sans-serif;
+}
+nav div { 
+    
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+nav ul {
+    text-align: right;
+}
+nav ul li {
+    display: inline;
+    padding-right: 20px;
+}
+
+nav ul li a:hover{
+   color: #fdc500;;
+}
+nav a:link {
+    font-size: 1.1em;
+    
+}
+nav img{
+    width: 100%;
+}
+
+nav ul li img{
+    width: 30px;
+}
+
+/* Footer */
+footer  {
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    background-color: #696969;
+    text-align: center; 
+    
+}
+footer p {
+    font-size: 1.1em;
+}
+
+
+/* index.php */
+main {
+    border: 2px solid rgb(68, 158, 255);/* Remove */
+    width: 100%;
+    height: 1000px;
+    padding: 20px;
+    font-family: "Arimo", sans-serif;
+}
+div {
+    border-radius: 3px;
+}
+#div1{
+    border: 2px solid rgb(34, 104, 25);/* Remove */
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px; /* Pushes out  */
+    padding: 20px; /* Pushes in */
+}
+#div2{
+    border: 2px solid rgb(104, 25, 25);/* Remove */
+    width: 100%;
+    height: 400px;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+#div2 div{
+    width: 250px;
+    height: 375px;
+    border: 2px solid rgb(134, 29, 175);
+
+}
+
+#div2 div:hover {
+  transform: scale(1.1);
+  transition-duration: .3s;
+}
+
+
+/* CSS Gird  */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two collums that fill the full width of the dic */
+  gap: 10px;
+}
+
+.box {
+  border: 1px solid #692b88;
+  padding: 20px;
+  height: 200px;
+}
+
+
