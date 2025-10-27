@@ -1,0 +1,184 @@
+
+/* Nav */
+nav {
+    width: 100%;
+    max-width: 100%;
+    height: 75px;
+    background-color: #001d3d;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Arimo", sans-serif;
+}
+nav div { 
+    width: 270px;
+    height: 60px;
+    border-radius: 5px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+nav ul {
+    text-align: right;
+}
+nav ul li {
+    display: inline;
+    padding-right: 20px;
+}
+
+nav ul li a:hover{
+   color: #fdc500;;
+}
+nav a:link {
+    font-size: 1.1em;
+    
+}
+nav img{
+    width: 50px;
+}
+
+nav ul li img{
+    width: 20px;
+}
+
+
+/*main page*/
+main {
+    
+    width: 100%;
+    height: 1000px;
+    padding: 20px;
+    font-family: "Arimo", sans-serif;
+    background-color: #eee7e7;
+}
+div {
+    border-radius: 3px;
+}
+#div1{
+    
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px; /* Pushes out  */
+    padding: 20px; /* Pushes in */
+    background: linear-gradient(340deg, #6aafff, #131eb3);
+}
+#div1 h1{
+color: #eee7e7;
+font-weight: bold;
+font-size: 2em;
+}
+#div1 p{
+color: #eee7e7;
+font-size: 1.3em;
+}
+
+
+
+/* Footer */
+footer  {
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    background-color: #696969;
+    text-align: center; 
+    
+}
+footer p {
+    font-size: 1.1em;
+    padding: 10px;
+    
+}
+
+/* CSS Gird  */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two collums that fill the full width of the dic */
+  gap: 10px;
+}
+
+.box {
+  border: 1px solid #692b88;
+  padding: 20px;
+  height: 200px;
+}
+
+/* Lessons page styles */
+.lesson-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    margin: 18px 0;
+    font-family: "Arimo", sans-serif;
+}
+.lesson-controls label {
+    font-weight: 600;
+    color: #001d3d;
+}
+.lesson-controls select {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 0.95rem;
+}
+
+.lesson-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+    margin-top: 8px;
+}
+
+.lesson-card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.lesson-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.lesson-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+}
+.lesson-card h2 {
+    font-size: 1.05rem;
+    margin: 12px 14px 6px;
+    color: #001d3d;
+}
+.lesson-card p {
+    margin: 0 14px 12px;
+    color: #444;
+    line-height: 1.35;
+    flex-grow: 1;
+}
+.start-button {
+    display: inline-block;
+    margin: 12px 14px 16px;
+    padding: 10px 14px;
+    background: #001d3d;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+}
+.start-button:hover {
+    background: #01325a;
+}
+
+@media (max-width: 520px) {
+    .lesson-card img { height: 110px; }
+    .lesson-controls { gap: 8px; }
+}

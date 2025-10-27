@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/learn_style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+    <div id="Logo">
+        <img src="Images/logo.png" alt="">
+        <p>BrightPath Learning</p>
+    </div>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="learn.html">Lessons</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="help.html">Help</a></li>
+        <li><img src="Images/accountplaceholder.png" ></li>
+    </ul>
+</nav>
+
+<main id="homemain">
+    <div id="div1">
+        <h1>Learn</h1>
+        <br>
+        <p>Welcome to the lessons page where you can go back on previous lessons you've learned in class.</p>
+    </div>
+    <!-- Sorting and filtering controls for lessons by grade level -->
+    <div class="lesson-controls" aria-hidden="false">
+        <label for="grade-filter">Filter by grade:</label>
+        <select id="grade-filter" name="grade-filter">
+            <option value="all">All grades</option>
+            <option value="1">Grade 1</option>
+            <option value="2">Grade 2</option>
+            <option value="3">Grade 3</option>
+            <option value="4">Grade 4</option>
+            <option value="5">Grade 5</option>
+            <option value="6">Grade 6</option>
+            <option value="7">Grade 7</option>
+            <option value="8">Grade 8</option>
+            <option value="9">Grade 9</option>
+            <option value="10">Grade 10</option>
+            <option value="11">Grade 11</option>
+            <option value="12">Grade 12</option>
+        </select>
+
+        <label for="grade-sort">Sort:</label>
+        <select id="grade-sort" name="grade-sort">
+            <option value="asc">Grade: Low → High</option>
+            <option value="desc">Grade: High → Low</option>
+        </select>
+    </div>
+    <div class="lesson-grid">
+        <div class="lesson-card" data-grade="3">
+            <img src="Images/lesson1.png" alt="Lesson 1">
+            <h2>Lesson 1: Introduction to Basics</h2>
+            <p>Grade 3</p>
+            <p>Get started with the fundamentals.</p>
+            <a href="lesson1.html" class="start-button">Start Lesson</a>
+        </div>
+        <div class="lesson-card" data-grade="5">
+            <img src="Images/lesson2.png" alt="Lesson 2">
+            <h2>Lesson 2: Intermediate Concepts</h2>
+            <p>Grade 5</p>
+            <p>Dive deeper into the subject matter.</p>
+            <a href="lesson2.html" class="start-button">Start Lesson</a>
+        </div>
+        <div class="lesson-card" data-grade="8">
+            <img src="Images/lesson3.png" alt="Lesson 3">
+            <h2>Lesson 3: Advanced Techniques</h2>
+            <p>Grade 8</p>
+            <p>Master the advanced topics.</p>
+            <a href="lesson3.html" class="start-button">Start Lesson</a>
+        </div>
+    </div>
+</main>
+
+
+<footer>
+
+    <p>&copy;<?php echo date("Y"); ?> Company Information</p>
+
+</footer>
+</footer>
+
+<!-- Client-side sorting/filtering for lesson cards by data-grade attribute -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const grid = document.querySelector('.lesson-grid');
+    if (!grid) return;
+
+    // Capture the original order so sorting is stable
+    const cards = Array.from(grid.querySelectorAll('.lesson-card')).map((el, idx) => ({
+        el,
+        originalIndex: idx,
+        grade: parseGrade(el.dataset.grade)
+    }));
+
+    const filterEl = document.getElementById('grade-filter');
+    const sortEl = document.getElementById('grade-sort');
+
+    // Initialize controls
+    filterEl.addEventListener('change', apply);
+    sortEl.addEventListener('change', apply);
+
+    // Run initial sort (default ascending)
+    apply();
+
+    function parseGrade(value) {
+        if (value === undefined) return Number.POSITIVE_INFINITY; // unknown grade => place last
+        const n = parseInt(value, 10);
+        return Number.isFinite(n) ? n : Number.POSITIVE_INFINITY;
+    }
+
+    function apply() {
+        const filter = filterEl.value; // 'all' or grade number as string
+        const direction = sortEl.value === 'desc' ? -1 : 1;
+
+        // Filter
+        let visible = cards.filter(item => {
+            if (filter === 'all') return true;
+            return String(item.grade) === String(filter);
+        });
+
+        // Sort by grade numeric, then by originalIndex to stabilize
+        visible.sort((a, b) => {
+            // items with unknown grade (Infinity) should go last
+            if (a.grade === b.grade) return a.originalIndex - b.originalIndex;
+            return direction * (a.grade - b.grade);
+        });
+
+        // Clear grid and append in new order
+        // We only show the filtered set; if you prefer to hide instead of remove other elements,
+        // we could toggle .hidden classes instead.
+        grid.innerHTML = '';
+        visible.forEach(item => grid.appendChild(item.el));
+    }
+});
+</script>
+
+</body>
+</html>
