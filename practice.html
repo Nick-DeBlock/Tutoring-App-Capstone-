@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -36,7 +37,262 @@
         <p>Welcome to the practice page where you can go through practice problems to help you study.</p>
     </div>
 
-    
+    <!-- Practice controls -->
+    <div class="practice-controls">
+        <label for="practice-grade">Show problems for:</label>
+        <select id="practice-grade">
+            <option value="all">All grades</option>
+            <option value="1">Grade 1</option>
+            <option value="2">Grade 2</option>
+            <option value="3">Grade 3</option>
+            <option value="4">Grade 4</option>
+            <option value="5">Grade 5</option>
+            <option value="6">Grade 6</option>
+            <option value="7">Grade 7</option>
+            <option value="8">Grade 8</option>
+            <option value="9">Grade 9</option>
+            <option value="10">Grade 10</option>
+            <option value="11">Grade 11</option>
+            <option value="12">Grade 12</option>
+        </select>
+    </div>
+
+    <!-- Practice problems separated by grade level -->
+    <section class="problems-list">
+        <section class="problems-section" data-grade="1">
+            <h2>Grade 1 — Basic addition & subtraction</h2>
+            <ol>
+                <li class="problem">
+                    <div class="question">1) 5 + 3 = ?</div>
+                    <details class="solution"><summary>Show solution</summary><p>5 + 3 = 8</p></details>
+                </li>
+                <li class="problem">
+                    <div class="question">2) 10 - 4 = ?</div>
+                    <details class="solution"><summary>Show solution</summary><p>10 - 4 = 6</p></details>
+                </li>
+                <li class="problem">
+                    <div class="question">3) If you have 2 candies and get 5 more, how many candies do you have?</div>
+                    <details class="solution"><summary>Show solution</summary><p>2 + 5 = 7 candies.</p></details>
+                </li>
+            </ol>
+        </section>
+        <section class="problems-section" data-grade="2">
+            <h2>Grade 2 — Introduction to addition & subtraction</h2>
+            <ol>
+                <li class="problem">
+                    <div class="question">1) 12 + 5 = ?</div>
+                    <details class="solution"><summary>Show solution</summary><p>12 + 5 = 17</p></details>
+                </li>
+                <li class="problem">
+                    <div class="question">2) 20 - 8 = ?</div>
+                    <details class="solution"><summary>Show solution</summary><p>20 - 8 = 12</p></details>
+                </li>
+                <li class="problem">
+                    <div class="question">3) If you have 10 apples and get 4 more, how many apples do you have?</div>
+                    <details class="solution"><summary>Show solution</summary><p>10 + 4 = 14 apples.</p></details>
+            </ol>
+        </section>
+        <section class="problems-section" data-grade="3">
+            <h2>Grade 3 — Basic operations</h2>
+            <ol>
+                <li class="problem">
+                    <div class="question">1) 24 + 17 = ?</div>
+                    <details class="solution"><summary>Show solution</summary><p>24 + 17 = 41</p></details>
+                </li>
+                <li class="problem">
+                    <div class="question">2) 50 - 23 = ?</div>
+                    <details class="solution"><summary>Show solution</summary><p>50 - 23 = 27</p></details>
+                </li>
+                <li class="problem">
+                    <div class="question">3) If you have 4 packs of stickers and each pack has 9 stickers, how many stickers do you have?</div>
+                    <details class="solution"><summary>Show solution</summary><p>4 × 9 = 36 stickers.</p></details>
+                </li>
+            </ol>
+        </section>
+
+        <section class="problems-section" data-grade="4">
+            <h2>Grade 4 — Multiplication & division</h2>
+            <ol>
+                <li class="problem">
+                    <div class="question">1) 8 × 7 = ?</div>
+                    <details class="solution"><summary>Show solution</summary><p>8 × 7 = 56</p></details>
+                </li>
+                <li class="problem">
+                    <div class="question">2) 56 ÷ 8 = ?</div>
+                    <details class="solution"><summary>Show solution</summary><p>56 ÷ 8 = 7</p></details>
+                </li>
+                <li class="problem">
+                    <div class="question">3) A ribbon 96 cm long is cut into 12 equal pieces. How long is each piece?</div>
+                    <details class="solution"><summary>Show solution</summary><p>96 ÷ 12 = 8 cm</p></details>
+                </li>
+            </ol>
+        </section>
+
+        <section class="problems-section" data-grade="5">
+            <h2>Grade 5 — Fractions & decimals</h2>
+            <ol>
+                <li class="problem">
+                    <div class="question">1) What is 1/2 + 3/8? (Give answer as a fraction)</div>
+                    <details class="solution"><summary>Show solution</summary><p>1/2 = 4/8, so 4/8 + 3/8 = 7/8</p></details>
+                </li>
+                <li class="problem">
+                    <div class="question">2) Convert 0.75 to a fraction.</div>
+                    <details class="solution"><summary>Show solution</summary><p>0.75 = 75/100 = 3/4</p></details>
+                </li>
+                <li class="problem">
+                    <div class="question">3) If a pizza is cut into 8 slices and you eat 3 slices, what fraction is left?</div>
+                    <details class="solution"><summary>Show solution</summary><p>8 - 3 = 5 slices left → 5/8</p></details>
+                </li>
+            </ol>
+        </section>
+
+        <section class="problems-section" data-grade="6">
+            <h2>Grade 6 — Ratios & basic algebra</h2>
+            <ol>
+                <li class="problem">
+                    <div class="question">1) If the ratio of cats to dogs is 3:5 and there are 15 dogs, how many cats are there?</div>
+                    <details class="solution"><summary>Show solution</summary><p>3/5 = cats/dogs → cats = 3/5 × 15 = 9</p></details>
+                </li>
+                <li class="problem">
+                    <div class="question">2) Solve for x: 4x = 28</div>
+                    <details class="solution"><summary>Show solution</summary><p>x = 28 ÷ 4 = 7</p></details>
+                </li>
+                <li class="problem">
+                    <div class="question">3) A shirt costs $24 after a 20% discount. What was the original price?</div>
+                    <details class="solution"><summary>Show solution</summary><p>If price after discount = 80% of original → original = 24 ÷ 0.8 = $30</p></details>
+                </li>
+            </ol>
+        </section>
+
+        <section class="problems-section" data-grade="7">
+            <h2>Grade 7 — Pre-algebra & simple geometry</h2>
+            <ol>
+                <li class="problem">
+                    <div class="question">1) Solve: 3(x + 4) = 21</div>
+                    <details class="solution"><summary>Show solution</summary><p>Divide both sides by 3: x + 4 = 7 → x = 3</p></details>
+                </li>
+                <li class="problem">
+                    <div class="question">2) Find the area of a triangle with base 10 cm and height 6 cm.</div>
+                    <details class="solution"><summary>Show solution</summary><p>Area = 1/2 × base × height = 0.5 × 10 × 6 = 30 cm²</p></details>
+                </li>
+                <li class="problem">
+                    <div class="question">3) Evaluate: 2² + 3³</div>
+                    <details class="solution"><summary>Show solution</summary><p>2² = 4, 3³ = 27 → 4 + 27 = 31</p></details>
+                </li>
+            </ol>
+        </section>
+
+        <section class="problems-section" data-grade="8">
+            <h2>Grade 8 — Linear equations & functions</h2>
+            <ol>
+                <li class="problem">
+                    <div class="question">1) Solve for y: 2y - 5 = 13</div>
+                    <details class="solution"><summary>Show solution</summary><p>2y = 18 → y = 9</p></details>
+                </li>
+                <li class="problem">
+                    <div class="question">2) If f(x) = 3x + 2, find f(4).</div>
+                    <details class="solution"><summary>Show solution</summary><p>f(4) = 3×4 + 2 = 14</p></details>
+                </li>
+                <li class="problem">
+                    <div class="question">3) A line has slope 2 and passes through (1,3). Write its equation.</div>
+                    <details class="solution"><summary>Show solution</summary><p>Point-slope: y - 3 = 2(x - 1) → y = 2x + 1</p></details>
+                </li>
+            </ol>
+        </section>
+        
+        <section class="problems-section" data-grade="9">
+            <h2>Grade 9 — Algebra & basic functions</h2>
+            <ol>
+                <li class="problem">
+                    <div class="question">1) Solve: x^2 − 5x + 6 = 0</div>
+                    <details class="solution"><summary>Show solution</summary><p>Factors to (x−2)(x−3)=0 → x=2 or x=3</p></details>
+                </li>
+                <li class="problem">
+                    <div class="question">2) Simplify: (3x^2)(2x^3)</div>
+                    <details class="solution"><summary>Show solution</summary><p>Multiply coefficients and add exponents: 6x^5</p></details>
+                </li>
+                <li class="problem">
+                    <div class="question">3) A line has slope −2 and passes through (1,4). Write its equation.</div>
+                    <details class="solution"><summary>Show solution</summary><p>y − 4 = −2(x − 1) → y = −2x + 6</p></details>
+                </li>
+            </ol>
+        </section>
+
+        <section class="problems-section" data-grade="10">
+            <h2>Grade 10 — Algebra II / Geometry basics</h2>
+            <ol>
+                <li class="problem">
+                    <div class="question">1) Solve for x: 2x^2 − 8 = 0</div>
+                    <details class="solution"><summary>Show solution</summary><p>2x^2 = 8 → x^2 = 4 → x = ±2</p></details>
+                </li>
+                <li class="problem">
+                    <div class="question">2) Evaluate: log₁₀(1000)</div>
+                    <details class="solution"><summary>Show solution</summary><p>log₁₀(1000) = 3</p></details>
+                </li>
+                <li class="problem">
+                    <div class="question">3) Find sin(30°) (exact value)</div>
+                    <details class="solution"><summary>Show solution</summary><p>sin(30°) = 1/2</p></details>
+                </li>
+            </ol>
+        </section>
+
+        <section class="problems-section" data-grade="11">
+            <h2>Grade 11 — Advanced algebra & precalc</h2>
+            <ol>
+                <li class="problem">
+                    <div class="question">1) Solve for x: 3e^(2x) = 24</div>
+                    <details class="solution"><summary>Show solution</summary><p>e^(2x) = 8 → 2x = ln 8 → x = (ln 8)/2</p></details>
+                </li>
+                <li class="problem">
+                    <div class="question">2) Expand: (x − 2)^3</div>
+                    <details class="solution"><summary>Show solution</summary><p>(x−2)^3 = x^3 − 6x^2 + 12x − 8</p></details>
+                </li>
+                <li class="problem">
+                    <div class="question">3) Sequence a_n = 2n + 1. What is a_10 and sum of first 10 terms?</div>
+                    <details class="solution"><summary>Show solution</summary><p>a_10 = 21. Sum = (10/2)*(a_1 + a_10) = 5*(3 + 21) = 120</p></details>
+                </li>
+            </ol>
+        </section>
+
+        <section class="problems-section" data-grade="12">
+            <h2>Grade 12 — Precalculus / Intro to calculus</h2>
+            <ol>
+                <li class="problem">
+                    <div class="question">1) Find derivative: f(x) = 3x^2 − 5x + 4</div>
+                    <details class="solution"><summary>Show solution</summary><p>f'(x) = 6x − 5</p></details>
+                </li>
+                <li class="problem">
+                    <div class="question">2) Evaluate ∫₀² 2x dx</div>
+                    <details class="solution"><summary>Show solution</summary><p>Antiderivative x^2 → x^2|₀² = 4</p></details>
+                </li>
+                <li class="problem">
+                    <div class="question">3) Find lim_{x→2} (x^2 − 4)/(x − 2)</div>
+                    <details class="solution"><summary>Show solution</summary><p>Factor numerator: (x−2)(x+2)/(x−2) → limit = 4</p></details>
+                </li>
+            </ol>
+        </section>
+    </section>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const select = document.getElementById('practice-grade');
+        const sections = Array.from(document.querySelectorAll('.problems-section'));
+
+        function applyFilter() {
+            const val = select.value;
+            sections.forEach(sec => {
+                if (val === 'all' || sec.dataset.grade === val) {
+                    sec.style.display = '';
+                } else {
+                    sec.style.display = 'none';
+                }
+            });
+        }
+
+        select.addEventListener('change', applyFilter);
+        applyFilter();
+    });
+    </script>
 
 
 </main>

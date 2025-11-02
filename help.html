@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -33,15 +34,18 @@
     <div id="div1">
         <h1>Help</h1>
         <br>
-        <p>Welcome to the help page where you can request help from a tutor.</p>
+        <p>Welcome to the help page where you can request help from a teacher or our AI tutor.</p>
     </div>
     <!-- Help content: contact form, FAQ and resources -->
     <section id="help-content">
         <div class="help-columns">
             <!-- Contact / Request form -->
             <aside class="help-contact">
-                <h2>Request a Tutor / Contact Support</h2>
-                <p>If you need personal help, fill out the form below and we'll connect you with a tutor. Submitting will open your mail client so you can send the request. Alternatively, contact <strong>support@brightpath.example</strong>.</p>
+                <h2>Request a Teacher / Contact AI Support</h2>
+                <p>If you need personal help, fill out the form below and we'll connect you with a teacher. Submitting will open your mail client so you can send the request. Alternatively, contact <strong>support@brightpath.example</strong>.</p>
+
+                <!-- AI chat launcher -->
+                <button id="ai-chat-button" class="ai-chat-button" type="button">Chat with our AI tutor</button>
 
                 <form id="contact-form">
                     <label for="name">Full name</label><br>
@@ -77,6 +81,8 @@
                 </form>
             </aside>
 
+
+
             <!-- FAQ and resources -->
             <div class="help-faq">
                 <h2>Frequently Asked Questions</h2>
@@ -92,7 +98,7 @@
 
                 <details>
                     <summary>Can I request a specific tutor?</summary>
-                    <p>Yes — include the tutor's name (if known) in your message and we'll try to schedule them when available.</p>
+                    <p>Yes — include the teacher's name (if known) in your message and we'll try to schedule them when available.</p>
                 </details>
 
                 <h3>Resources</h3>
@@ -133,6 +139,8 @@
         });
     });
     </script>
+
+    
 
 </main>
 

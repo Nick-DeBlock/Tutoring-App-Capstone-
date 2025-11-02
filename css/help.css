@@ -10,6 +10,9 @@ nav {
     align-items: center;
     justify-content: space-between;
     font-family: "Arimo", sans-serif;
+    
+    font-family: "Zalando", sans-serif;
+
 }
 nav div { 
     width: 270px;
@@ -50,7 +53,7 @@ footer  {
     width: 100%;
     height: 50px;
     color: #fff;
-    background-color: #696969;
+    background-color: #001d3d;
     text-align: center; 
     
 }
@@ -61,12 +64,14 @@ footer p {
 
 /* index.php */
 main {
-    
     width: 100%;
-    height: 1000px;
-    padding: 20px;
+    /* Responsive main height: allow main to grow with content while filling viewport
+       minus nav and footer so the footer doesn't overlap content. */
+    min-height: calc(100vh - 125px);
+    padding: 20px 20px 40px;
     font-family: "Arimo", sans-serif;
     background-color: #eee7e7;
+    box-sizing: border-box;
 }
 div {
     border-radius: 3px;
@@ -87,6 +92,7 @@ font-size: 2em;
 #div1 p{
 color: #eee7e7;
 font-size: 1.3em;
+font-family: "Zalando Sans Expanded", sans-serif;
 }
 
 #div2{
@@ -190,6 +196,66 @@ font-size: 1.3em;
 }
 .help-contact button[type="submit"]:hover {
     background: #01325a;
+}
+
+/* AI chat launcher/button */
+.ai-chat-button {
+    display: inline-block;
+    margin: 8px 0 12px 0;
+    padding: 10px 14px;
+    background: #ff7a59;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+}
+.ai-chat-button:hover { background: #ff5a36; }
+
+/* Chat modal styles */
+.ai-chat-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 1200;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+}
+.ai-chat-window {
+    width: min(480px, 96%);
+    max-height: 80vh;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.ai-chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    background: linear-gradient(90deg,#001d3d,#01325a);
+    color: #fff;
+}
+.ai-chat-messages {
+    padding: 12px;
+    overflow-y: auto;
+    flex: 1 1 auto;
+    background: #f7f9fb;
+}
+.ai-msg { margin: 8px 0; padding: 8px 10px; border-radius: 8px; max-width: 88%; }
+.ai-msg.user { background: #001d3d; color: #fff; margin-left: auto; }
+.ai-msg.bot { background: #eef2ff; color: #111; margin-right: auto; }
+.ai-chat-form { display: flex; gap: 8px; padding: 10px; border-top: 1px solid #e6eef8; }
+.ai-chat-input { flex: 1 1 auto; padding: 8px 10px; border-radius: 6px; border: 1px solid #cfdff0; }
+.ai-chat-send { padding: 8px 12px; background: #001d3d; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+.ai-chat-close { background: transparent; border: none; color: #fff; font-size: 1.1rem; cursor: pointer; }
+
+@media (max-width: 520px) {
+    .ai-chat-window { width: 100%; height: 90vh; }
 }
 
 .help-faq {
