@@ -1,0 +1,233 @@
+
+/* Nav */
+nav {
+    width: 100%;
+    max-width: 100%;
+    height: 75px;
+    background-color: #001d3d;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Arimo", sans-serif;
+}
+nav div { 
+    width: 270px;
+    height: 60px;
+    border-radius: 5px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+nav ul {
+    text-align: right;
+}
+nav ul li {
+    display: inline;
+    padding-right: 20px;
+}
+
+nav ul li a:hover{
+   color: #fdc500;;
+}
+nav a:link {
+    font-size: 1.1em;
+    
+}
+nav img{
+    width: 50px;
+}
+
+nav ul li img{
+    width: 20px;
+}
+
+/* Footer */
+footer  {
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    background-color: #696969;
+    text-align: center; 
+    
+}
+footer p {
+    font-size: 1.1em;
+}
+
+
+/* index.php */
+main {
+    
+    width: 100%;
+    height: 1000px;
+    padding: 20px;
+    font-family: "Arimo", sans-serif;
+    background-color: #eee7e7;
+}
+div {
+    border-radius: 3px;
+}
+#div1{
+    
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px; /* Pushes out  */
+    padding: 20px; /* Pushes in */
+    background: linear-gradient(340deg, #6aafff, #131eb3);
+}
+#div1 h1{
+color: #eee7e7;
+font-weight: bold;
+font-size: 2em;
+}
+#div1 p{
+color: #eee7e7;
+font-size: 1.3em;
+}
+
+#div2{
+    
+    width: 100%;
+    height: 400px;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+#div2 div{
+    width: 250px;
+    height: 375px;
+    
+    background-color: #6aafff ;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-shadow: #fdc500;
+    font-weight: bold;
+    font-size: 3.5em;
+    color: #eee7e7;
+}
+
+#div2 div:hover {
+  transform: scale(1.1);
+  transition-duration: .3s;
+}
+
+
+/* CSS Gird  */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two collums that fill the full width of the dic */
+  gap: 10px;
+}
+
+.box {
+  border: 1px solid #692b88;
+  padding: 20px;
+  height: 200px;
+}
+
+/* Help page specific styles */
+#help-content {
+    padding: 18px 20px;
+    font-family: "Arimo", sans-serif;
+}
+.help-columns {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 28px;
+    align-items: start;
+}
+.help-contact {
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+.help-contact h2 {
+    margin-top: 0;
+    color: #001d3d;
+}
+.help-contact p {
+    color: #333;
+    font-size: 0.95rem;
+}
+.help-contact form {
+    margin-top: 12px;
+}
+.help-contact label {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.help-contact input[type="text"],
+.help-contact input[type="email"],
+.help-contact select,
+.help-contact textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin: 6px 0 12px 0;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+.help-contact button[type="submit"] {
+    background: #001d3d;
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.help-contact button[type="submit"]:hover {
+    background: #01325a;
+}
+
+.help-faq {
+    background: #fff;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+.help-faq h2 {
+    margin-top: 0;
+    color: #001d3d;
+}
+.help-faq details {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    background: #fbfbfd;
+    border: 1px solid #eef1f6;
+}
+.help-faq summary {
+    font-weight: 700;
+    cursor: pointer;
+}
+.help-faq p {
+    margin: 8px 0 0 0;
+}
+.help-faq ul {
+    margin: 8px 0 0 18px;
+}
+
+@media (max-width: 880px) {
+    .help-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+}
+
+

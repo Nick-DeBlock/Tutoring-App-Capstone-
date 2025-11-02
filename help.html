@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <title>Help Page</title> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/help.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+    <div id="Logo">
+        <img src="Images/logo.png" alt="">
+        <p>BrightPath Learning</p>
+    </div>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="learn.html">Lessons</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="help.html">Help</a></li>
+        <li><img src="Images/accountplaceholder.png" ></li>
+    </ul>
+</nav>
+
+
+
+<main id="homemain">
+
+    <div id="div1">
+        <h1>Help</h1>
+        <br>
+        <p>Welcome to the help page where you can request help from a tutor.</p>
+    </div>
+    <!-- Help content: contact form, FAQ and resources -->
+    <section id="help-content">
+        <div class="help-columns">
+            <!-- Contact / Request form -->
+            <aside class="help-contact">
+                <h2>Request a Tutor / Contact Support</h2>
+                <p>If you need personal help, fill out the form below and we'll connect you with a tutor. Submitting will open your mail client so you can send the request. Alternatively, contact <strong>support@brightpath.example</strong>.</p>
+
+                <form id="contact-form">
+                    <label for="name">Full name</label><br>
+                    <input type="text" id="name" name="name" required placeholder="Your name"><br>
+
+                    <label for="email">Your email</label><br>
+                    <input type="email" id="email" name="email" required placeholder="you@example.com"><br>
+
+                    <label for="grade">Grade</label><br>
+                    <select id="grade" name="grade" requierd placeholder="Grade Level">
+                        <option value="all">Select grade</option>
+                        <option value="1">Grade 1</option>
+                        <option value="2">Grade 2</option>
+                        <option value="3">Grade 3</option>
+                        <option value="4">Grade 4</option>
+                        <option value="5">Grade 5</option>
+                        <option value="6">Grade 6</option>
+                        <option value="7">Grade 7</option>
+                        <option value="8">Grade 8</option>
+                        <option value="9">Grade 9</option>
+                        <option value="10">Grade 10</option>
+                        <option value="11">Grade 11</option>
+                        <option value="12">Grade 12</option>
+                    </select><br>
+
+                    <label for="subject">Subject / Topic</label><br>
+                    <input type="text" id="subject" name="subject" placeholder="e.g., Algebra: Linear equations"><br>
+
+                    <label for="message">Message</label><br>
+                    <textarea id="message" name="message" rows="5" placeholder="Describe what you need help with"></textarea><br>
+
+                    <button type="submit">Send request</button>
+                </form>
+            </aside>
+
+            <!-- FAQ and resources -->
+            <div class="help-faq">
+                <h2>Frequently Asked Questions</h2>
+                <details>
+                    <summary>How do I start a lesson?</summary>
+                    <p>Go to the <a href="learn.html">Lessons</a> page and click the "Start Lesson" button on any card.</p>
+                </details>
+
+                <details>
+                    <summary>How do I practice skills?</summary>
+                    <p>Head to the <a href="practice.html">Practice</a> page where exercises are available for many lessons.</p>
+                </details>
+
+                <details>
+                    <summary>Can I request a specific tutor?</summary>
+                    <p>Yes — include the tutor's name (if known) in your message and we'll try to schedule them when available.</p>
+                </details>
+
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="learn.html">All Lessons</a></li>
+                    <li><a href="practice.html">Practice Exercises</a></li>
+                    <li><a href="home.html">Getting Started Guide</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple client-side handler: open default mail client with the form contents -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('contact-form');
+        if (!form) return;
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const grade = document.getElementById('grade').value;
+            const subject = document.getElementById('subject').value.trim() || 'Tutoring request';
+            const message = document.getElementById('message').value.trim();
+
+            const to = 'support@brightpath.example';
+            const mailSubject = encodeURIComponent(subject + (grade ? ' (Grade ' + grade + ')' : ''));
+            let body = '';
+            if (name) body += 'Name: ' + name + '\n';
+            if (email) body += 'Email: ' + email + '\n';
+            if (grade) body += 'Grade: ' + grade + '\n';
+            body += '\n' + (message || '(no additional message)');
+            const mailto = 'mailto:' + to + '?subject=' + mailSubject + '&body=' + encodeURIComponent(body);
+
+            // Open default mail client
+            window.location.href = mailto;
+        });
+    });
+    </script>
+
+</main>
+
+<footer>
+
+    <p>&copy;<?php echo date("Y"); ?> Company Information</p>
+
+</footer>
+
+</body>
+</html>

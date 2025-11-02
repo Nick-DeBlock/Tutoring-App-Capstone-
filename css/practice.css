@@ -1,0 +1,139 @@
+
+/* Nav */
+nav {
+    width: 100%;
+    max-width: 100%;
+    height: 75px;
+    background-color: #001d3d;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Arimo", sans-serif;
+}
+nav div { 
+    width: 270px;
+    height: 60px;
+    border-radius: 5px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+nav ul {
+    text-align: right;
+}
+nav ul li {
+    display: inline;
+    padding-right: 20px;
+}
+
+nav ul li a:hover{
+   color: #fdc500;;
+}
+nav a:link {
+    font-size: 1.1em;
+    
+}
+nav img{
+    width: 50px;
+}
+
+nav ul li img{
+    width: 20px;
+}
+
+/* Footer */
+footer  {
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    background-color: #696969;
+    text-align: center; 
+    
+}
+footer p {
+    font-size: 1.1em;
+}
+
+
+/* index.php */
+main {
+    
+    width: 100%;
+    height: 1000px;
+    padding: 20px;
+    font-family: "Arimo", sans-serif;
+    background-color: #eee7e7;
+}
+div {
+    border-radius: 3px;
+}
+#div1{
+    
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px; /* Pushes out  */
+    padding: 20px; /* Pushes in */
+    background: linear-gradient(340deg, #6aafff, #131eb3);
+}
+#div1 h1{
+color: #eee7e7;
+font-weight: bold;
+font-size: 2em;
+}
+#div1 p{
+color: #eee7e7;
+font-size: 1.3em;
+}
+
+#div2{
+    
+    width: 100%;
+    height: 400px;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+#div2 div{
+    width: 250px;
+    height: 375px;
+    
+    background-color: #6aafff ;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-shadow: #fdc500;
+    font-weight: bold;
+    font-size: 3.5em;
+    color: #eee7e7;
+}
+
+#div2 div:hover {
+  transform: scale(1.1);
+  transition-duration: .3s;
+}
+
+
+/* CSS Gird  */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two collums that fill the full width of the dic */
+  gap: 10px;
+}
+
+.box {
+  border: 1px solid #692b88;
+  padding: 20px;
+  height: 200px;
+}
+
+
