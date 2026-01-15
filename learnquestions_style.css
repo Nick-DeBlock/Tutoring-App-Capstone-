@@ -1,0 +1,101 @@
+
+/* Nav */
+nav {
+    width: 100%;
+    max-width: 100%;
+    height: 75px;
+    background-color: #001d3d;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Arimo", sans-serif;
+}
+nav div { 
+    width: 270px;
+    height: 60px;
+    border-radius: 5px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+nav ul {
+    text-align: right;
+}
+nav ul li {
+    display: inline;
+    padding-right: 20px;
+}
+
+nav ul li a:hover{
+   color: #fdc500;;
+}
+nav a:link {
+    font-size: 1.1em;
+    
+}
+nav img{
+    width: 50px;
+}
+
+nav ul li img{
+    width: 20px;
+}
+
+/* Footer */
+footer  {
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    background-color: #696969;
+    text-align: center; 
+    
+}
+footer p {
+    font-size: 1.1em;
+}
+
+
+/* index.php */
+main {
+    
+    width: 100%;
+    height: 1000px;
+    padding: 20px;
+    font-family: "Arimo", sans-serif;
+    background-color: #eee7e7;
+}
+div {
+    border-radius: 3px;
+    border: 1px solid #692b88;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ul{
+    row-gap: 30px;
+}
+form{
+    line-height: 30px;
+        border: 1px solid #2b885e;
+        width: 500px;
+        height: 300px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08)
+    }
+input{
+    border-radius: 3px;
+    border: 2px solid #000000;
+}
+#submit{
+    background: #001d3d;
+    color: #fff;
+}
+h1{
+
+}
+
+
